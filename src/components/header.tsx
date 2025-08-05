@@ -13,6 +13,7 @@ import {
   DropdownMenu,
 } from "@heroui/react";
 import Image from "next/image";
+import { LiaBookSolid } from "react-icons/lia";
 
 export const AcmeLogo = () => {
   return (
@@ -26,10 +27,10 @@ export const AcmeLogo = () => {
       />
     </svg> */}
     <Image 
-      src="/logo/apana_learn_logo.png"
+      src="/hero/transparent_logo.png"
       alt="logo"
       className=""
-      width={128}
+      width={64}
       height={64}
     />
     </>
@@ -242,27 +243,37 @@ export default function Header() {
   };
 
   return (
+    <>
+
+  <div aria-hidden="true" className="absolute top-1/2 left-[max(-7rem,calc(50%-52rem))] -z-10 -translate-y-1/2 transform-gpu blur-2xl">
+    <div style={{clipPath: "polygon(74.8% 41.9%, 97.2% 73.2%, 100% 34.9%, 92.5% 0.4%, 87.5% 0%, 75% 28.6%, 58.5% 54.6%, 50.1% 56.8%, 46.9% 44%, 48.3% 17.4%, 24.7% 53.9%, 0% 27.9%, 11.9% 74.2%, 24.9% 54.1%, 68.6% 100%, 74.8% 41.9%)"}} className="aspect-577/310 w-144.25 bg-linear-to-r from-[#ff80b5] to-[#9089fc] opacity-30"></div>
+  </div>
+  <div aria-hidden="true" className="absolute top-1/2 left-[max(45rem,calc(50%+8rem))] -z-10 -translate-y-1/2 transform-gpu blur-2xl">
+    <div style={{clipPath: "polygon(74.8% 41.9%, 97.2% 73.2%, 100% 34.9%, 92.5% 0.4%, 87.5% 0%, 75% 28.6%, 58.5% 54.6%, 50.1% 56.8%, 46.9% 44%, 48.3% 17.4%, 24.7% 53.9%, 0% 27.9%, 11.9% 74.2%, 24.9% 54.1%, 68.6% 100%, 74.8% 41.9%)"}} className="aspect-577/310 w-144.25 bg-linear-to-r from-[#ff80b5] to-[#9089fc] opacity-30"></div>
+  </div>
     <Navbar
     isBordered
     height="4rem"
     maxWidth="full"
+    //  className="bg-linear-to-r from-[#ff80b5] to-[#9089fc] opacity-30"
     >
-      <NavbarBrand>
-        <AcmeLogo/>
-        {/* <p className="font-bold text-inherit">ACME</p> */}
+            <NavbarBrand>
+        <AcmeLogo />
+        <p className="font-bold text-2xl">Apana Learn</p>
       </NavbarBrand>
-      {/* <NavbarContent className="hidden sm:flex gap-4" justify="center">
+          <NavbarContent className="hidden sm:flex gap-8" justify="start">
         <Dropdown>
           <NavbarItem>
             <DropdownTrigger>
               <Button
                 disableRipple
-                className="p-0 bg-transparent data-[hover=true]:bg-transparent"
+                className="p-0 bg-transparent data-[hover=true]:bg-transparent font-semibold tracking-wider"
                 endContent={icons.chevron}
                 radius="sm"
                 variant="light"
               >
-                Features
+                <LiaBookSolid size={18}/>
+                Learn
               </Button>
             </DropdownTrigger>
           </NavbarItem>
@@ -310,17 +321,20 @@ export default function Header() {
           </DropdownMenu>
         </Dropdown>
         <NavbarItem isActive>
-          <Link aria-current="page" href="#">
-            Customers
+          <Link aria-current="page" href="#" className="font-semibold tracking-wider">
+            Practice
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" href="#">
-            Integrations
+          <Link color="foreground" href="#" className="font-semibold tracking-wider">
+            Blogs
           </Link>
         </NavbarItem>
-      </NavbarContent> */}
+      </NavbarContent>
+
+
       <NavbarContent justify="end">
+
         <NavbarItem className="hidden lg:flex">
           {/* <Link href="#">Login</Link> */}
           <Image 
@@ -330,12 +344,24 @@ export default function Header() {
             width={28}
           />
         </NavbarItem>
-        {/* <NavbarItem>
-          <Button as={Link} color="danger" href="#" variant="flat">
-            Sign Up
+                <NavbarItem className="hidden lg:flex">
+          {/* <Link href="#">Login</Link> */}
+          <Image 
+            src="/icons/linkedin.png"
+            alt="github"
+            height={28}
+            width={28}
+          />
+        </NavbarItem>
+        <NavbarItem>
+          <Button as={Link} color="danger" className="bg-yellow-500 font-bold tracking-wider  text-white" href="#" variant="flat">
+            Login
           </Button>
-        </NavbarItem> */}
+        </NavbarItem>
       </NavbarContent>
     </Navbar>
+
+    </>
+
   );
 }

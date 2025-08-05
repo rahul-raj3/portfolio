@@ -2,7 +2,7 @@
 
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-
+import Image from 'next/image';
 // const responsive = {
 //   desktop: {
 //     breakpoint: { max: 3000, min: 1024 },
@@ -30,7 +30,7 @@ const Hero = () => {
       <h1 className="block text-3xl font-bold text-gray-800 sm:text-4xl md:text-5xl lg:text-6xl dark:text-white">Build Better Products</h1>
       <p className="mt-3 text-lg text-gray-800 dark:text-neutral-400">Introducing a new way for your brand to reach the creative community.</p>
 
-      <div className="mt-5 lg:mt-8 flex flex-col items-center gap-2 sm:flex-row sm:gap-3">
+      {/* <div className="mt-5 lg:mt-8 flex flex-col items-center gap-2 sm:flex-row sm:gap-3">
         <div className="w-full sm:w-auto">
           <label htmlFor="hero-input" className="sr-only">Search</label>
           <input type="text" id="hero-input" name="hero-input" 
@@ -40,7 +40,7 @@ const Hero = () => {
         <a className="w-full sm:w-auto py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-hidden focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none" href="#">
           Request demo
         </a>
-      </div>
+      </div> */}
 
       <div className="mt-6 lg:mt-12">
         <span className="text-xs font-medium text-gray-800 uppercase dark:text-neutral-200">Trusted by:</span>
@@ -85,7 +85,13 @@ const Hero = () => {
     </div>
 
     <div className="lg:col-span-4 mt-10 lg:mt-0">
-      <img className="w-full rounded-xl" src="https://images.unsplash.com/photo-1665686376173-ada7a0031a85?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=900&h=700&q=80" alt="Hero Image" />
+      <Image 
+      className="rounded-xl" 
+      src="/hero/hero1.png"
+      width={800}
+      height={400}
+      // src="https://images.unsplash.com/photo-1665686376173-ada7a0031a85?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=900&h=700&q=80" 
+      alt="Hero Image" />
     </div>
   </div>
 </div>

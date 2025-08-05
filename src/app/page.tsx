@@ -4,15 +4,20 @@ import Hero from "@/components/hero";
 import Footer from "@/components/footer";
 import Featured from "@/components/featured";
 import Trending from "@/components/trending";
+import AllFeatures from "@/components/allFeatures";
+import Announcement from "@/components/announcement";
+import NewsLetter from "@/components/newsletter";
 
 export default function Home() {
   return (
     <>
+        <Announcement />
         <Header />
         <Hero />
-        {/* <Featured /> */}
+        <Featured />
         <Trending />
-
+        {/* <AllFeatures /> */}
+        {/* <NewsLetter /> */}
         <Footer />
     </>
 
