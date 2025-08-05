@@ -10,8 +10,9 @@ export default function Home() {
     <>
         <Header />
         <Hero />
-        <Featured />
+        {/* <Featured /> */}
         <Trending />
+
         <Footer />
     </>
 

@@ -26,11 +26,11 @@ export const AcmeLogo = () => {
       />
     </svg> */}
     <Image 
-      src="/logo/logo.png"
+      src="/logo/apana_learn_logo.png"
       alt="logo"
-      className="w-32"
-      width={52}
-      height={52}
+      className=""
+      width={128}
+      height={64}
     />
     </>
   );
@@ -242,12 +242,16 @@ export default function Header() {
   };
 
   return (
-    <Navbar>
+    <Navbar
+    isBordered
+    height="4rem"
+    maxWidth="full"
+    >
       <NavbarBrand>
-        <AcmeLogo />
+        <AcmeLogo/>
         {/* <p className="font-bold text-inherit">ACME</p> */}
       </NavbarBrand>
-      <NavbarContent className="hidden sm:flex gap-4" justify="center">
+      {/* <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <Dropdown>
           <NavbarItem>
             <DropdownTrigger>
@@ -315,16 +319,22 @@ export default function Header() {
             Integrations
           </Link>
         </NavbarItem>
-      </NavbarContent>
+      </NavbarContent> */}
       <NavbarContent justify="end">
         <NavbarItem className="hidden lg:flex">
-          <Link href="#">Login</Link>
+          {/* <Link href="#">Login</Link> */}
+          <Image 
+            src="/logo/github_logo.png"
+            alt="github"
+            height={28}
+            width={28}
+          />
         </NavbarItem>
-        <NavbarItem>
-          <Button as={Link} color="primary" href="#" variant="flat">
+        {/* <NavbarItem>
+          <Button as={Link} color="danger" href="#" variant="flat">
             Sign Up
           </Button>
-        </NavbarItem>
+        </NavbarItem> */}
       </NavbarContent>
     </Navbar>
   );
