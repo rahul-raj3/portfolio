@@ -1,3 +1,4 @@
+'use client'
 
 const Announcement = () => {
     return(
@@ -6,7 +7,7 @@ const Announcement = () => {
       <div className="flex items-center justify-center text-center relative">
         <p className="text-[15px] text-white font-medium pr-6 leading-relaxed tracking-wider">
             🚀 We're live! Start your learning journey now.
-          <a href="javascript:void(0)" className="ml-1">Shop Now!</a></p>
+          <a href="javascript:void(0)" className="ml-1">Start Now!</a></p>
         <div className="absolute right-0">
           <svg xmlns="http://www.w3.org/2000/svg" className="w-3.5 cursor-pointer fill-white inline-block" viewBox="0 0 320.591 320.591">
             <path d="M30.391 318.583a30.37 30.37 0 0 1-21.56-7.288c-11.774-11.844-11.774-30.973 0-42.817L266.643 10.665c12.246-11.459 31.462-10.822 42.921 1.424 10.362 11.074 10.966 28.095 1.414 39.875L51.647 311.295a30.366 30.366 0 0 1-21.256 7.288z" data-original="#000000" />

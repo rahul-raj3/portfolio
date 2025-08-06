@@ -259,7 +259,7 @@ export default function Header() {
     >
             <NavbarBrand>
         <AcmeLogo />
-        <p className="font-bold text-2xl">Apana Learn</p>
+        <p className="font-bold text-2xl">Apana Learning</p>
       </NavbarBrand>
           <NavbarContent className="hidden sm:flex gap-8" justify="start">
         <Dropdown>
@@ -288,35 +288,35 @@ export default function Header() {
               description="ACME scales apps based on demand and load"
               startContent={icons.scale}
             >
-              Autoscaling
+              DSA
             </DropdownItem>
             <DropdownItem
               key="usage_metrics"
               description="Real-time metrics to debug issues"
               startContent={icons.activity}
             >
-              Usage Metrics
+              JavaScript
             </DropdownItem>
             <DropdownItem
               key="production_ready"
               description="ACME runs on ACME, join us at web scale"
               startContent={icons.flash}
             >
-              Production Ready
+              Node.js
             </DropdownItem>
             <DropdownItem
               key="99_uptime"
               description="High availability and uptime guarantees"
               startContent={icons.server}
             >
-              +99% Uptime
+              Next.js
             </DropdownItem>
             <DropdownItem
               key="supreme_support"
               description="Support team ready to respond"
               startContent={icons.user}
             >
-              +Supreme Support
+              Databases
             </DropdownItem>
           </DropdownMenu>
         </Dropdown>
@@ -354,9 +354,9 @@ export default function Header() {
           />
         </NavbarItem>
         <NavbarItem>
-          <Button as={Link} color="danger" className="bg-yellow-500 font-bold tracking-wider  text-white" href="#" variant="flat">
+          {/* <Button as={Link} color="danger" className="bg-yellow-500 font-bold tracking-wider  text-white" href="#" variant="flat">
             Login
-          </Button>
+          </Button> */}
         </NavbarItem>
       </NavbarContent>
     </Navbar>

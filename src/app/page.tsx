@@ -7,6 +7,7 @@ import Trending from "@/components/trending";
 import AllFeatures from "@/components/allFeatures";
 import Announcement from "@/components/announcement";
 import NewsLetter from "@/components/newsletter";
+import Subscribe from "@/components/subscribe";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
         <Trending />
         {/* <AllFeatures /> */}
         {/* <NewsLetter /> */}
+        <Subscribe />
         <Footer />
     </>
 
