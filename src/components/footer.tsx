@@ -58,9 +58,9 @@ const Footer = () => {
         <ul className="space-y-2">
           <li><a href="#" className="text-gray-400 hover:text-white transition">Home</a></li>
           <li><a href="#" className="text-gray-400 hover:text-white transition">About Us</a></li>
-          <li><a href="#" className="text-gray-400 hover:text-white transition">Services</a></li>
-          <li><a href="#" className="text-gray-400 hover:text-white transition">Pricing</a></li>
-          <li><a href="#" className="text-gray-400 hover:text-white transition">Blog</a></li>
+          <li><a href="#" className="text-gray-400 hover:text-white transition">Resources</a></li>
+          {/* <li><a href="#" className="text-gray-400 hover:text-white transition"></a></li> */}
+          <li><a href="#" className="text-gray-400 hover:text-white transition">Blogs</a></li>
         </ul>
       </div>
 
@@ -68,30 +68,30 @@ const Footer = () => {
         <h3 className="text-lg font-semibold">Services</h3>
         <ul className="space-y-2">
           <li><a href="#" className="text-gray-400 hover:text-white transition">Web Development</a></li>
-          <li><a href="#" className="text-gray-400 hover:text-white transition">Mobile Apps</a></li>
-          <li><a href="#" className="text-gray-400 hover:text-white transition">UI/UX Design</a></li>
+          <li><a href="#" className="text-gray-400 hover:text-white transition">DSA</a></li>
+          {/* <li><a href="#" className="text-gray-400 hover:text-white transition">UI/UX Design</a></li>
           <li><a href="#" className="text-gray-400 hover:text-white transition">Digital Marketing</a></li>
-          <li><a href="#" className="text-gray-400 hover:text-white transition">Cloud Solutions</a></li>
+          <li><a href="#" className="text-gray-400 hover:text-white transition">Cloud Solutions</a></li> */}
         </ul>
       </div>
 
       <div className="space-y-4">
-        <h3 className="text-lg font-semibold">Contact Us</h3>
-        <address className="not-italic text-gray-400">
+        {/* <h3 className="text-lg font-semibold">Contact Us</h3> */}
+        {/* <address className="not-italic text-gray-400">
           <p>123 Business Ave</p>
           <p>San Francisco, CA 94107</p>
           <p className="mt-2">Email: <a href="mailto:info@company.com" className="hover:text-white transition">info@company.com</a></p>
           <p>Phone: <a href="tel:+11234567890" className="hover:text-white transition">+1 (123) 456-7890</a></p>
-        </address>
+        </address> */}
       </div>
     </div>
 
     <div className="border-t border-gray-800 pt-6 flex flex-col md:flex-row justify-between items-center">
-      <p className="text-gray-500 text-sm mb-4 md:mb-0">© 2025 Company. All rights reserved.</p>
+      <p className="text-gray-500 text-sm mb-4 md:mb-0">© 2025 Apana Learning. All rights reserved.</p>
       <div className="flex space-x-6">
         <a href="#" className="text-gray-500 hover:text-white text-sm transition">Privacy Policy</a>
         <a href="#" className="text-gray-500 hover:text-white text-sm transition">Terms of Service</a>
-        <a href="#" className="text-gray-500 hover:text-white text-sm transition">Cookies</a>
+        {/* <a href="#" className="text-gray-500 hover:text-white text-sm transition">Cookies</a> */}
       </div>
     </div>
   </div>
