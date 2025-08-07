@@ -14,7 +14,7 @@ const Subscribe = () => {
                             </p>
                         </div>
                         <div className="flex items-center justify-end w-full md:w-auto lg:w-1/2 px-4">
-                            <form className="w-full flex justify-end">
+                            {/* <form className="w-full flex justify-end">
                         <input type="email" id="email" placeholder="Enter your email address" 
                         defaultValue=""
                         className="flex-1 px-6 py-2 placeholder-gray-300 border border-gray-300 rounded-full sm:mr-5 focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-800 dark:text-white dark:placeholder-gray-400 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" />
@@ -25,7 +25,7 @@ const Subscribe = () => {
                                 >
                                     Subscribe
                                 </button>
-                            </form>
+                            </form> */}
                         </div>
                     </div>
                 </div>
