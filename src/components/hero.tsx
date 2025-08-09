@@ -4,9 +4,14 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import Image from 'next/image';
 import { TypeAnimation } from 'react-type-animation';
+import Marquee from "react-fast-marquee";
 
 
 const Hero = () => {
+
+
+
+
     return(
         <>
 <div className="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 mt-10">
@@ -51,29 +56,43 @@ const Hero = () => {
       </div> */}
 
 <div className="mt-6 lg:mt-12">
-  <span className="text-xs font-medium text-gray-800 uppercase dark:text-neutral-200 tracking-wider">
-    SKILLS:
+  <span className="text-xs font-bold text-gray-800 uppercase dark:text-neutral-200 tracking-wider">
+    Skills:
   </span>
 
   <div className="mt-4 flex flex-wrap gap-4 sm:gap-6 lg:gap-8">
+    <Marquee
+    pauseOnHover={true}
+    gradient={false}
+    >
+          {/* <Image src="/icons/atom.png" alt="Image 1" width={80} height={80} className="mx-4" />
+          <Image src="/icons/atom.png" alt="Image 1" width={80} height={80} className="mx-4" />
+          <Image src="/icons/atom.png" alt="Image 1" width={80} height={80} className="mx-4" />
+                    <Image src="/icons/atom.png" alt="Image 1" width={80} height={80} className="mx-4" />
+
+          <Image src="/icons/atom.png" alt="Image 1" width={80} height={80} className="mx-4" />
+          <Image src="/icons/atom.png" alt="Image 1" width={80} height={80} className="mx-4" />
+          <Image src="/icons/atom.png" alt="Image 1" width={80} height={80} className="mx-4" />
+          <Image src="/icons/atom.png" alt="Image 1" width={80} height={80} className="mx-4" /> */}
+
     <Image 
       src="/icons/atom.png"
       alt="atom"
       width={32}
       height={32}
-      className="w-8 h-8 lg:w-16 lg:h-16"
+      className="w-8 h-8 lg:w-16 lg:h-16 mx-4"
     />
     <Image 
       src="/icons/js.png"
       alt="database"
       width={32}
       height={32}
-      className="w-8 h-8 lg:w-16 lg:h-16"
+      className="w-8 h-8 lg:w-16 lg:h-16 mx-4"
     />
     <Image 
       src="/icons/database-storage.png"
       alt="nodejs"
-      className="w-8 h-8 lg:w-16 lg:h-16"
+      className="w-8 h-8 lg:w-16 lg:h-16 mx-4"
             width={32}
 height={32}
 
@@ -81,11 +100,19 @@ height={32}
     <Image 
       src="/icons/nodejs.png"
       alt="javascript"
-      className="w-8 h-8 lg:w-16 lg:h-16"
+      className="w-8 h-8 lg:w-16 lg:h-16 mx-4"
             width={32}
 height={32}
     />
-    {/* Add more if needed */}
+    <Image 
+      src="/icons/atom.png"
+      alt="atom"
+      width={32}
+      height={32}
+      className="w-8 h-8 lg:w-16 lg:h-16 mx-4"
+    />
+
+    </Marquee>
   </div>
 </div>
 

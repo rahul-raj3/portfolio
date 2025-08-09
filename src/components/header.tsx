@@ -334,35 +334,35 @@ export default function Header() {
           <DropdownMenu aria-label="ACME features" itemClasses={{ base: "gap-4" }}>
             <DropdownItem
               key="autoscaling"
-              description="ACME scales apps based on demand and load"
+              // description="ACME scales apps based on demand and load"
               startContent={icons.scale}
             >
               DSA
             </DropdownItem>
             <DropdownItem
               key="usage_metrics"
-              description="Real-time metrics to debug issues"
+              // description="Real-time metrics to debug issues"
               startContent={icons.activity}
             >
               JavaScript
             </DropdownItem>
             <DropdownItem
               key="production_ready"
-              description="ACME runs on ACME, join us at web scale"
+              // description="ACME runs on ACME, join us at web scale"
               startContent={icons.flash}
             >
               Node.js
             </DropdownItem>
             <DropdownItem
               key="99_uptime"
-              description="High availability and uptime guarantees"
+              // description="High availability and uptime guarantees"
               startContent={icons.server}
             >
               Next.js
             </DropdownItem>
             <DropdownItem
               key="supreme_support"
-              description="Support team ready to respond"
+              // description="Support team ready to respond"
               startContent={icons.user}
             >
               Databases
