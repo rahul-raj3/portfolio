@@ -414,7 +414,7 @@ export default function Header() {
       </Button>
         </NavbarItem>
         <NavbarItem>{/* Login button can go here if needed */}
-        <Button  startContent={<UserIcon />}  className="bg-black text-white tracking-wider font-semibold hidden lg:flex">
+        <Button className="bg-yellow-600 text-white tracking-wider font-semibold hidden lg:flex">
           Login
         </Button>
         </NavbarItem>
