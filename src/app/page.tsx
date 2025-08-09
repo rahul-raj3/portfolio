@@ -6,6 +6,7 @@ import Trending from "@/components/trending";
 import Announcement from "@/components/announcement";
 import Subscribe from "@/components/subscribe";
 import TrendingTopics from "@/components/trendingTopics";
+import BlogSection from "@/components/blogsSection";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
         <Hero />
         <Featured />
         <Trending />
+        {/* <BlogSection /> */}
         {/* <AllFeatures /> */}
         {/* <NewsLetter /> */}
         <TrendingTopics />
