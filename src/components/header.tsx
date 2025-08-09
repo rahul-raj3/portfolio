@@ -243,25 +243,78 @@ export default function Header() {
   };
 
   return (
-    <>
+<>
+  {/* Wrapper to prevent background overflow on mobile */}
+  <div className="relative overflow-hidden">
 
-  <div aria-hidden="true" className="absolute top-1/2 left-[max(-7rem,calc(50%-52rem))] -z-10 -translate-y-1/2 transform-gpu blur-2xl">
-    <div style={{clipPath: "polygon(74.8% 41.9%, 97.2% 73.2%, 100% 34.9%, 92.5% 0.4%, 87.5% 0%, 75% 28.6%, 58.5% 54.6%, 50.1% 56.8%, 46.9% 44%, 48.3% 17.4%, 24.7% 53.9%, 0% 27.9%, 11.9% 74.2%, 24.9% 54.1%, 68.6% 100%, 74.8% 41.9%)"}} className="aspect-577/310 w-144.25 bg-linear-to-r from-[#ff80b5] to-[#9089fc] opacity-30"></div>
-  </div>
-  <div aria-hidden="true" className="absolute top-1/2 left-[max(45rem,calc(50%+8rem))] -z-10 -translate-y-1/2 transform-gpu blur-2xl">
-    <div style={{clipPath: "polygon(74.8% 41.9%, 97.2% 73.2%, 100% 34.9%, 92.5% 0.4%, 87.5% 0%, 75% 28.6%, 58.5% 54.6%, 50.1% 56.8%, 46.9% 44%, 48.3% 17.4%, 24.7% 53.9%, 0% 27.9%, 11.9% 74.2%, 24.9% 54.1%, 68.6% 100%, 74.8% 41.9%)"}} className="aspect-577/310 w-144.25 bg-linear-to-r from-[#ff80b5] to-[#9089fc] opacity-30"></div>
-  </div>
-    <Navbar
-    isBordered
-    height="4rem"
-    maxWidth="full"
-    //  className="bg-linear-to-r from-[#ff80b5] to-[#9089fc] opacity-30"
+    {/* Left background shape */}
+    <div
+      aria-hidden="true"
+      className="
+        absolute
+        top-1/2
+        left-[max(-10rem,calc(50%-52rem))]
+        sm:left-[max(-7rem,calc(50%-52rem))]
+        -z-10
+        -translate-y-1/2
+        transform-gpu
+        blur-xl sm:blur-2xl
+        pointer-events-none
+      "
     >
-            <NavbarBrand>
+      <div
+        style={{
+          clipPath:
+            "polygon(74.8% 41.9%, 97.2% 73.2%, 100% 34.9%, 92.5% 0.4%, 87.5% 0%, 75% 28.6%, 58.5% 54.6%, 50.1% 56.8%, 46.9% 44%, 48.3% 17.4%, 24.7% 53.9%, 0% 27.9%, 11.9% 74.2%, 24.9% 54.1%, 68.6% 100%, 74.8% 41.9%)",
+        }}
+        className="
+          aspect-[577/310]
+          w-[30rem] sm:w-[36rem] md:w-[45rem]
+          bg-gradient-to-r from-[#ffec80] to-[#9089fc]
+          opacity-20 sm:opacity-30
+        "
+      />
+    </div>
+
+    {/* Right background shape */}
+    <div
+      aria-hidden="true"
+      className="
+        absolute
+        top-1/2
+        left-[max(10rem,calc(50%+8rem))]
+        sm:left-[max(45rem,calc(50%+8rem))]
+        -z-10
+        -translate-y-1/2
+        transform-gpu
+        blur-xl sm:blur-2xl
+        pointer-events-none
+      "
+    >
+      <div
+        style={{
+          clipPath:
+            "polygon(74.8% 41.9%, 97.2% 73.2%, 100% 34.9%, 92.5% 0.4%, 87.5% 0%, 75% 28.6%, 58.5% 54.6%, 50.1% 56.8%, 46.9% 44%, 48.3% 17.4%, 24.7% 53.9%, 0% 27.9%, 11.9% 74.2%, 24.9% 54.1%, 68.6% 100%, 74.8% 41.9%)",
+        }}
+        className="
+          aspect-[577/310]
+          w-[30rem] sm:w-[36rem] md:w-[45rem]
+          bg-gradient-to-r from-[#ff80b5] to-[#9089fc]
+          opacity-20 sm:opacity-30
+        "
+      />
+    </div>
+
+    {/* Navbar */}
+    <Navbar isBordered height="4rem" maxWidth="full" className="w-full" position="static"
+    shouldHideOnScroll={false}
+    >
+      <NavbarBrand>
         <AcmeLogo />
-        <p className="font-bold text-2xl">Apana Learning</p>
+        <p className="font-bold text-lg">Apana Learning</p>
       </NavbarBrand>
-          <NavbarContent className="hidden sm:flex gap-8" justify="start">
+
+      <NavbarContent className="hidden sm:flex gap-8" justify="start">
         <Dropdown>
           <NavbarItem>
             <DropdownTrigger>
@@ -272,17 +325,13 @@ export default function Header() {
                 radius="sm"
                 variant="light"
               >
-                <LiaBookSolid size={18}/>
+                <LiaBookSolid size={18} />
                 Learn
               </Button>
             </DropdownTrigger>
           </NavbarItem>
-          <DropdownMenu
-            aria-label="ACME features"
-            itemClasses={{
-              base: "gap-4",
-            }}
-          >
+
+          <DropdownMenu aria-label="ACME features" itemClasses={{ base: "gap-4" }}>
             <DropdownItem
               key="autoscaling"
               description="ACME scales apps based on demand and load"
@@ -320,48 +369,116 @@ export default function Header() {
             </DropdownItem>
           </DropdownMenu>
         </Dropdown>
+
         <NavbarItem isActive>
-          <Link aria-current="page" href="#" className="font-semibold tracking-wider">
+          <Link href="#" className="font-semibold tracking-wider">
             Practice
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link color="foreground" href="#" className="font-semibold tracking-wider">
+          <Link href="#" className="font-semibold tracking-wider">
             Blogs
           </Link>
         </NavbarItem>
       </NavbarContent>
 
-
       <NavbarContent justify="end">
-
         <NavbarItem className="hidden lg:flex">
-          {/* <Link href="#">Login</Link> */}
-          <Image 
+          {/* <Image
             src="/logo/github_logo.png"
             alt="github"
             height={28}
             width={28}
-          />
+            draggable={false}
+          /> */}
+      <Button isIconOnly aria-label="Like" className="bg-transparent">
+        <HeartIcon />
+      </Button>
         </NavbarItem>
-                <NavbarItem className="hidden lg:flex">
-          {/* <Link href="#">Login</Link> */}
-          <Image 
+        <NavbarItem className="hidden lg:flex">
+          {/* <Image
             src="/icons/linkedin.png"
-            alt="github"
+            alt="linkedin"
             height={28}
             width={28}
+            draggable={false}
+          /> */}
+       <Button isIconOnly aria-label="Like" className="bg-transparent">
+          <Image
+            src="/icons/linkedin.png"
+            alt="linkedin"
+            height={28}
+            width={28}
+            draggable={false}
           />
+      </Button>
         </NavbarItem>
-        <NavbarItem>
-          {/* <Button as={Link} color="danger" className="bg-yellow-500 font-bold tracking-wider  text-white" href="#" variant="flat">
-            Login
-          </Button> */}
+        <NavbarItem>{/* Login button can go here if needed */}
+        <Button  startContent={<UserIcon />}  className="bg-black text-white tracking-wider font-semibold hidden lg:flex">
+          Login
+        </Button>
         </NavbarItem>
       </NavbarContent>
     </Navbar>
+  </div>
+</>
 
-    </>
 
   );
 }
+
+export const UserIcon = ({fill = "currentColor", size, height, width, ...props}: any) => {
+  return (
+    <svg
+      data-name="Iconly/Curved/Profile"
+      height={size || height || 20}
+      viewBox="0 0 24 24"
+      width={size || width || 20}
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <g
+        fill="none"
+        stroke={fill}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeMiterlimit={10}
+        strokeWidth={1.5}
+      >
+        <path
+          d="M11.845 21.662C8.153 21.662 5 21.088 5 18.787s3.133-4.425 6.845-4.425c3.692 0 6.845 2.1 6.845 4.4s-3.134 2.9-6.845 2.9z"
+          data-name="Stroke 1"
+        />
+        <path d="M11.837 11.174a4.372 4.372 0 10-.031 0z" data-name="Stroke 3" />
+      </g>
+    </svg>
+  );
+};
+
+export const HeartIcon = ({fill = "currentColor", filled, size, height, width, ...props}: any) => {
+  return (
+    // <svg
+    //   fill={filled ? fill : "none"}
+    //   height={size || height || 24}
+    //   viewBox="0 0 24 24"
+    //   width={size || width || 24}
+    //   xmlns="http://www.w3.org/2000/svg"
+    //   {...props}
+    // >
+    //   <path
+    //     d="M12.62 20.81c-.34.12-.9.12-1.24 0C8.48 19.82 2 15.69 2 8.69 2 5.6 4.49 3.1 7.56 3.1c1.82 0 3.43.88 4.44 2.24a5.53 5.53 0 0 1 4.44-2.24C19.51 3.1 22 5.6 22 8.69c0 7-6.48 11.13-9.38 12.12Z"
+    //     stroke={fill}
+    //     strokeLinecap="round"
+    //     strokeLinejoin="round"
+    //     strokeWidth={1.5}
+    //   />
+    // </svg>
+        <Image
+            src="/logo/github_logo.png"
+            alt="github"
+            height={28}
+            width={28}
+            draggable={false}
+          /> 
+  );
+};

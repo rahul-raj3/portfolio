@@ -4,7 +4,7 @@
 const Featured = () => {
     return (
         <>
-<div className="container mx-auto flex gap-12 flex-wrap items-start justify-center md:justify-between mt-8 mb-10">
+<div className="container mx-auto flex gap-12 flex-wrap items-start justify-center md:justify-between mt-10 mb-10 bg-slate-50 p-8">
     <div className="grid gap-4 justify-items-center text-center md:flex-1">
         <div className=" rounded-full border-8 border-amber-400 p-4 ">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5"
@@ -14,7 +14,7 @@ const Featured = () => {
                 </path>
             </svg>
         </div>
-        <h3 className="text-3xl font-bold">Safe</h3>
+        <h3 className="text-lg sm:text-xl lg:text-md md: 2xl font-bold tracking-wider">Engaging</h3>
         {/* <p>Our products are secure and private out-of-the-box</p> */}
     </div>
     <div className="grid gap-4 justify-items-center text-center md:flex-1">
@@ -25,7 +25,8 @@ const Featured = () => {
                     d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"></path>
             </svg>
         </div>
-        <h3 className="text-3xl font-bold">Efficient</h3>
+        <h3 className="text-lg sm:text-xl lg:text-md md: 2xl font-bold tracking-wider">Interactive</h3>
+
         {/* <p>Feel good about your wallet and the environment</p> */}
     </div>
     <div className="grid gap-4 justify-items-center text-center md:flex-1">
@@ -38,7 +39,7 @@ const Featured = () => {
             </svg>
 
         </div>
-        <h3 className="text-3xl font-bold">Proven</h3>
+        <h3 className="text-lg sm:text-xl lg:text-md md: 2xl font-bold tracking-wider">Proven</h3>
         {/* <p>Leading the Smart Home world for 10 years</p> */}
     </div>
         <div className="grid gap-4 justify-items-center text-center md:flex-1">
@@ -49,7 +50,7 @@ const Featured = () => {
                     d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"></path>
             </svg>
         </div>
-        <h3 className="text-3xl font-bold">Free</h3>
+        <h3 className="text-lg sm:text-xl lg:text-md md: 2xl font-bold tracking-wider">Self-paced</h3>
         {/* <p>Feel good about your wallet and the environment</p> */}
     </div>
 </div>     
