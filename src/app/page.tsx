@@ -10,13 +10,13 @@ export default function Home() {
   return (
     <>
         <Announcement />
-        <Header />
+        {/* <Header /> */}
         <Hero />
         <Featured />
         {/* <Trending /> */}
         {/* <AllFeatures /> */}
         {/* <NewsLetter /> */}
-        <Subscribe />
+        {/* <Subscribe /> */}
         <Footer />
     </>
 
